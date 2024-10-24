@@ -1,0 +1,1082 @@
+.reveal {
+  position: relative;
+  opacity: 0;
+}
+.reveal.active {
+  opacity: 1;
+}
+.active.fade-bottom {
+  animation: fade-bottom 1s ease-in;
+}
+.active.fade-left {
+  animation: fade-left 1s ease-in;
+}
+.active.fade-right {
+  animation: fade-right 1s ease-in;
+}
+.animation-bottom {
+  animation: fade-bottom 1s ease-in;
+}
+.animation-left {
+  animation: fade-left 1s ease-in;
+}
+.animation-right {
+  animation: fade-right 1s ease-in;
+}
+.error_fields p{
+  color: var(--danger-red) !important;
+}
+.error_fields input{
+  border-bottom: 1px solid var(--danger-red) !important;
+}
+.select-box-default {
+  font-size: 16px;
+  font-family: "jokker-regular";
+  color: var(--black);
+  opacity: 0.5;
+}
+.select-box-landing .MuiInput-input:focus {
+  background-color: transparent;
+}
+.select-box-landing
+  .contact-select-box:hover:not(.Mui-disabled, .Mui-error):before {
+  border-bottom: 1px solid var(--header-bg);
+}
+
+.groupHere {
+  color: #09143a !important;
+  font-weight: 600;
+}
+.select-box-landing .contact-select-box:before {
+  border-bottom: 1px solid var(--header-bg);
+}
+.select-box-landing .contact-select-box:after {
+  border-bottom: unset;
+}
+@keyframes fade-bottom {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-left {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-right {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.hero_section {
+  background-color: var(--header-bg);
+  background-image: url(../assets/images/banner-background.webp);
+  background-position: 50% 6%;
+  background-repeat: no-repeat;
+}
+
+.hero_main {
+  padding-top: 200px;
+}
+
+.hero_image_main {
+  margin-bottom: -3px;
+}
+.hero_text h1 {
+  font-size: 50px;
+  color: var(--white);
+  margin-bottom: 30px;
+}
+.hero_text p {
+  font-size: 18px;
+  color: #f0c102;
+  margin: 0px;
+  font-family: "jokker-regular";
+  line-height: 28px;
+}
+.hero_text {
+  display: flex;
+  flex-direction: column !important;
+  justify-content: center;
+}
+.sub_heading {
+  color: var(--header-bg);
+  font-size: 18px;
+  margin: 0;
+}
+
+.main_heading {
+  color: var(--header-bg);
+  font-size: 50px;
+  margin-top: 12px;
+  margin-bottom: 30px;
+}
+
+.aboutText p {
+  font-size: 20px;
+  line-height: 28px;
+  max-width: 505px;
+  margin-bottom: 50px;
+}
+.about_image {
+  display: flex;
+  justify-content: end;
+  padding-right: 15%;
+}
+.lenders_servicers_Text p {
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 50px;
+}
+.lenders_servicers_image{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  overflow: hidden;
+}
+.lenders_servicers_content{
+  padding-right: 0px !important;
+}
+.lenders_servicers_image img{
+  margin-right: -30px;
+}
+.about_card {
+  padding: 30px;
+  box-shadow: 0px 6px 12px #00000008;
+  border-radius: 24px;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* width: 100%; */
+  min-height: 282px;
+  max-width: 400px;
+}
+
+.about_card h3 {
+  margin: 0;
+  font-size: 24px;
+  font-family: "jokker-bold";
+  color: var(--header-bg);
+}
+
+.about_card p {
+  margin: 0;
+  font-size: 16px;
+  color: var(--header-bg);
+  /* max-width: 295px; */
+  line-height: 24px;
+}
+.values_card {
+  /* padding: 32px 0; */
+  padding-top: 32px;
+  padding-bottom: 0px;
+  margin-top: 50px;
+}
+.values_card h2 {
+  font-family: "jokker-bold";
+  font-size: 24px;
+  margin-bottom: 20px;
+  margin-top: 0;
+  color: var(--header-bg);
+  max-width: 250px;
+}
+
+.values_card h4 {
+  margin-top: 20px;
+  margin-bottom: unset;
+}
+
+.values_card p {
+  font-family: "jokker-regular";
+  font-size: 16px;
+  margin: 0px;
+  color: var(--header-bg);
+  line-height: 24px;
+  max-width: 320px;
+}
+.pr-75 {
+  padding-right: 75px;
+}
+.border-l-r {
+  border: 1px solid var(--header-bg);
+  border-top: none;
+  border-bottom: none;
+}
+
+.service_section {
+  background-color: var(--header-bg);
+  padding: 70px 0;
+}
+.text-white {
+  color: var(--white) !important;
+}
+
+.offer_card {
+  padding: 40px;
+  border-radius: 24px;
+  background-color: var(--header-bg);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  border: 1px solid var(--white);
+  color: var(--white);
+  cursor: pointer;
+  max-width: 400px;
+  height: 480px;
+  position: relative;
+}
+
+.offer_card:hover {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.offer_card:hover.offer_card h3 {
+  color: var(--black);
+}
+
+.offer_card:hover.offer_card p {
+  color: var(--black);
+}
+
+.offer_card h3 {
+  color: var(--white);
+  font-size: 32px;
+  line-height: 38px;
+  font-family: "jokker-bold";
+  margin: 0;
+}
+
+.offer_card p {
+  color: var(--white);
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "jokker-light";
+  margin: 0;
+  min-height: 160px;
+  max-width: 320px;
+  line-height: 24px;
+}
+
+.offer_card svg {
+  font-size: 50px;
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+}
+.offer_card:nth-child(3) h3 {
+  max-width: 100px;
+}
+.offer_card:hover .light_img {
+  display: none;
+}
+
+.offer_card:hover .dark_img {
+  display: block;
+}
+.insurance_marketplace_box {
+  position: absolute;
+  height: calc(100% - 100px);
+  width: calc(100% - 100px);
+  background-color: var(--white);
+  left: 20px;
+  bottom: 0;
+  z-index: 3;
+  border-radius: 24px;
+  padding: 40px;
+  display: flex;
+}
+
+.insurance_marketplace_box p {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--header-bg);
+  font-family: "jokker-regular";
+  margin-top: 0px;
+}
+
+.insurance_marketplace_box .devider {
+  height: auto;
+  width: 2px;
+  background-color: var(--header-bg);
+  opacity: 0.2;
+  margin: 25px 105px 25px 75px;
+}
+.insurance_marketplace svg {
+  font-size: 50px;
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  transform: rotate(180deg);
+}
+.dark_img {
+  display: none;
+}
+
+.Insurance_Marketplace {
+  padding: 100px 0;
+}
+
+.Insurance_Marketplace_card {
+  height: 254px;
+  border-radius: 20px;
+  padding: 0px;
+  transition: 0.5s;
+  margin-top: 0 !important;
+  width: 295px;
+  /* margin-bottom: 20px; */
+}
+
+.Insurance_Marketplace_card img {
+  margin-top: 33px;
+  margin-left: 33px;
+}
+
+.Insurance_Marketplace_card h4 {
+  opacity: 0;
+  transition: 0.5s;
+  margin: 0 33px;
+  margin-bottom: 33px !important;
+}
+
+.Insurance_Marketplace_card h2,
+.Insurance_Marketplace_card p {
+  margin: 0 33px;
+}
+
+.Insurance_Marketplace_card:hover.Insurance_Marketplace_card h4 {
+  opacity: 1 !important;
+}
+
+.Insurance_Marketplace_card:hover {
+  background-color: var(--white);
+  box-shadow: 0px 6px 12px #00000008;
+}
+.insurance_marketplace_text {
+  margin: 25px 0;
+}
+
+.insurance_marketplace {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  min-width: 201px;
+}
+
+.insurance_marketplace h3 {
+  color: var(--header-bg);
+  font-size: 32px;
+  line-height: 38px;
+  font-family: "jokker-bold";
+  margin: 0;
+}
+.learnMoreModel {
+  width: 60%;
+  /* height: 600px; */
+  position: absolute;
+  background-color: var(--dashboard-bg);
+  border-radius: 10px;
+  margin: auto;
+  top: 50%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  overflow: hidden;
+  padding: 30px;
+}
+.learnMoreModel:focus-visible {
+  outline: none;
+}
+.contentTitleBox {
+  width: 40%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.contentTitleBox h2 {
+  font-family: "jokker-bold";
+  font-size: 24px;
+  color: var(--black);
+  margin: 0;
+  padding: 0;
+}
+.contentTitleBox h3 {
+  font-family: "jokker-regular";
+  color: var(--black);
+  margin-top: 10px;
+  padding: 0;
+  font-size: 18px;
+}
+.contentBox {
+  width: 60%;
+  padding: 30px;
+  max-height: 400px;
+  overflow: auto;
+}
+.contentBox p {
+  font-family: "jokker-regular";
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: var(--black);
+  line-height: 28px;
+}
+.contentBox li {
+  font-family: "jokker-regular";
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: var(--black);
+  line-height: 28px;
+  margin-bottom: 10px;
+  list-style: disc;
+}
+.join_section {
+  background-color: var(--white);
+  padding: 50px 0;
+}
+.pr-75 {
+  padding-right: 75px;
+}
+.partner {
+  padding: 100px 0;
+}
+.partner_card {
+  background-color: var(--white);
+  border-radius: 20px;
+  min-height: 199px;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.partner_card:hover {
+  transform: translateY(-10px);
+}
+
+.partner_card_image {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.partner_card_image img {
+  height: 100%;
+  width: auto;
+  max-width: 250px;
+  object-fit: contain;
+}
+.team_desc .p_tag {
+  max-width: 295px;
+}
+.team_sub_desc .p_tag {
+  max-width: 381px;
+}
+
+.team_sub_desc h2 {
+  max-width: 265px;
+}
+.team_sub_desc .p_tag {
+  max-width: 381px;
+}
+
+.team_sub_desc h2 {
+  max-width: 265px;
+}
+.p_tag {
+  font-family: "jokker-regular";
+  font-size: 16px;
+  margin: 0px;
+  color: var(--header-bg);
+  line-height: 24px;
+}
+.card_title {
+  font-family: "jokker-bold";
+  font-size: 24px;
+  margin-bottom: 20px;
+  margin-top: 0;
+  color: var(--header-bg);
+}
+.text-center {
+  text-align: center;
+}
+.mt-30 {
+  margin-top: 30px;
+}
+.p-30-40 {
+  padding: 30px 40px !important;
+}
+.contact_section_main {
+  position: relative;
+  background-color: var(--white);
+}
+
+.contact_section_main::before {
+  height: 100%;
+  width: 50%;
+  background-color: var(--header-bg);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.contact_section {
+  background-color: var(--white);
+  display: flex;
+  position: relative;
+  z-index: 1;
+}
+.promis_section {
+  background-color: var(--header-bg);
+  padding: 100px 0px 0px 0px;
+  width: 50%;
+}
+.promis_section p {
+  max-width: 400px;
+}
+.form_section {
+  padding: 67px 0px 67px 67px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  background-color: var(--white);
+}
+.form_fild p {
+  color: var(--header-bg);
+  width: 100%;
+  font-size: 16px;
+  font-family: "jokker-regular";
+  margin: 0;
+}
+.mandatory{
+  color: var(--danger-red);
+  font-size: 12px;
+  vertical-align: super;
+}
+.form_fild input {
+  color: var(--header-bg);
+  width: 100%;
+  font-size: 16px;
+  font-family: "jokker-regular";
+  margin: 0;
+  height: 40px;
+  width: 100%;
+  border: unset;
+  border-bottom: 1px solid var(--header-bg);
+}
+
+.form_fild input:focus {
+  outline: unset;
+}
+
+.form_fild textarea {
+  color: var(--header-bg);
+  width: 100%;
+  font-size: 16px;
+  font-family: "jokker-regular";
+  margin: 0;
+  width: 100%;
+  border: unset;
+  border-bottom: 1px solid var(--header-bg);
+}
+
+.form_fild textarea:focus {
+  outline: unset;
+}
+.submit_button {
+  padding: 17px 50px;
+  background-color: var(--yellow);
+  color: var(--header-bg);
+  font-size: 18px;
+  font-family: "jokker-medium";
+  border: unset;
+  width: fit-content;
+  border-radius: 8px;
+}
+.footer_section {
+   /* height: 97px; */
+   padding: 20px 0px;
+  display: flex;
+  align-items: center;
+  background-color: var(--turquoise);
+}
+.footer_details {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.footer_details p {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-family: "jokker-medium";
+}
+.partner_heading p {
+  font-size: 20px;
+  max-width: 557px;
+  margin: auto;
+}
+.partner_box_main {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+}
+.partner_box {
+  margin-top: 0px;
+  padding-top: 0px;
+  min-height: 270px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-bottom: 1px solid #dedfe4;
+}
+.join_section h1 {
+  margin-bottom: 70px !important;
+}
+.partner_box:nth-child(2),
+.partner_box:nth-child(5) {
+  align-items: center;
+  border-left: 1px solid #dedfe4;
+  border-right: 1px solid #dedfe4;
+}
+.partner_box:nth-child(5),
+.partner_box:nth-child(4) {
+  border-bottom: unset;
+  justify-content: end;
+}
+.partner_box:nth-child(3) {
+  align-items: flex-end;
+}
+.partner_box h4 {
+  width: fit-content;
+}
+.partner_box p {
+  min-height: 111px;
+}
+.how_work_section {
+  padding: 100px 0;
+}
+.how_work_section_p {
+  font-size: 20px;
+  line-height: 28px;
+  max-width: 505px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.how_work_section_dark_box {
+  background-color: var(--header-bg);
+  padding: 30px 30px 0px 30px;
+  background-position: bottom;
+  border-radius: 24px;
+  background-repeat: repeat-x;
+  height: 428px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url(../assets/images/background-pattern.png);
+}
+.how_work_section_dark_box img {
+  width: fit-content;
+}
+.how_work_section_dark_box h4 {
+  font-family: "jokker-bold" !important;
+  font-size: 24px;
+  color: var(--turquoise);
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+.how_work_section_dark_box p {
+  font-family: "jokker-regular" !important;
+  font-size: 16px;
+  color: var(--white);
+  margin: 0px;
+  padding: 0px;
+  min-height: 60px;
+  line-height: 24px;
+}
+.how_work_section_box_main {
+  padding: 53px 37px;
+  height: unset;
+  margin: 0px !important;
+}
+.how_work_section_box_main h3 {
+  margin: 0px !important;
+  padding: 0;
+  font-size: 32px;
+  font-family: "jokker-bold";
+  margin-bottom: 30px !important;
+  line-height: 38px;
+}
+.how_work_section_box_main p {
+  margin: 0px !important;
+  padding: 0;
+  line-height: 24px;
+}
+.landing-page-modal .css-i9fmh8-MuiBackdrop-root-MuiModal-backdrop {
+  background-color: rgba(9, 20, 58, 0.9) !important;
+}
+.contentTitleBox button {
+  padding: 16px 32px;
+  font-family: "jokker-semibold";
+  font-size: 18px;
+}
+.Insurance_Marketplace_card_new {
+  padding: 30px;
+  min-height: 210px;
+}
+.Insurance_Marketplace_card_new img {
+  margin-top: 0px;
+  margin-left: 0px;
+}
+.Insurance_Marketplace_card_new h2,
+.Insurance_Marketplace_card_new p,
+.Insurance_Marketplace_card_new h4 {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.Insurance_Marketplace_card_new h4 {
+  margin-bottom: 0px !important;
+}
+.Insurance_Marketplace_card_new {
+  height: unset;
+  width: unset;
+}
+.static_page {
+  padding: 100px 0;
+}
+.static_page h1 {
+  color: var(--header-bg);
+  font-family: "bunch-bold";
+  font-size: 3.1rem;
+  letter-spacing: 0px;
+  margin-top: 0px;
+  text-align: center;
+}
+.licenses_box {
+  color: var(--turquoise);
+  font-size: 1.5rem;
+  padding: 30px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  background-color: var(--header-bg);
+  border-radius: 22px;
+}
+.static_page b {
+  font-family: "jokker-bold";
+  font-size: 20px;
+}
+.static_page p {
+  font-family: "jokker-regular";
+  font-size: 1.25rem;
+  line-height: 2rem;
+}
+.static_page li {
+  font-family: "jokker-regular";
+  font-size: 1.25rem;
+  line-height: 2rem;
+  list-style: auto;
+}
+
+.responsiveOfferModal {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  height: 100%;
+  width: 100%;
+  background-color: red;
+  display: none;
+}
+
+@media only screen and (max-width: 1200px) {
+  .hero_section {
+    background-size: contain;
+  }
+  .values_card p {
+    max-width: unset;
+    min-height: unset !important;
+  }
+  .pr-75,
+  .pl-75 {
+    padding: 0 !important;
+  }
+  .border-l-r {
+    border: unset !important;
+  }
+  .offer_card {
+    max-width: unset;
+    height: unset;
+  }
+
+  .offer_card p {
+    max-width: unset;
+  }
+
+  .offer_card svg {
+    display: none;
+  }
+  .insurance_marketplace_box {
+    display: none;
+  }
+  .team_desc .p_tag {
+    max-width: unset;
+  }
+  .partner_box_main {
+    grid-template-columns: auto auto;
+  }
+  .partner_box {
+    padding: 20px;
+  }
+  .partner_box:nth-child(2) {
+    border-right: unset;
+  }
+  .partner_box:nth-child(3) {
+    border-right: 1px solid #dedfe4;
+  }
+  .partner_box:nth-child(4) {
+    border-bottom: 1px solid #dedfe4;
+    justify-content: start;
+  }
+  .partner_box:nth-child(5) {
+    border-left: unset;
+    justify-content: start;
+  }
+  .responsiveOfferModal {
+    display: block;
+    opacity: 0;
+  }
+}
+@media only screen and (max-width: 1055px) {
+  .contact_section {
+    display: block;
+  }
+  .promis_section {
+    width: auto;
+  }
+  .form_section {
+    width: auto;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .contact_section_main::before {
+    width: 100%;
+    height: 200px;
+  }
+  .promis_section img {
+    display: none !important;
+  }
+
+  .promis_section {
+    padding: 6px 0;
+  }
+  .learnMoreModel {
+    flex-direction: column;
+  }
+  .contentTitleBox {
+    width: -webkit-fill-available;
+    padding-bottom: 0px;
+  }
+  .contentBox {
+    width: -webkit-fill-available;
+    padding-top: 0px;
+  }
+  .contentTitleBox .submit_button {
+    margin-top: 20px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .hero_image_main {
+    margin: auto;
+    display: block;
+  }
+  .lenders_servicers_image img{
+    width: 90%;
+  }
+  .main_heading {
+    font-size: 30px !important;
+  }
+  .about_image {
+    padding-right: 10%;
+    justify-content: end !important;
+    width: -webkit-fill-available;
+  }
+  .about_card {
+    width: auto;
+  }
+
+  .values_card h4 {
+    margin-top: 10px !important;
+  }
+  .offer_card p {
+    min-height: unset;
+  }
+  .Insurance_Marketplace_card h4 {
+    opacity: 1;
+  }
+
+  .Insurance_Marketplace_card p {
+    margin-bottom: 10px !important;
+  }
+
+  .Insurance_Marketplace_card {
+    min-height: unset;
+    padding: 10px 5px;
+    border-bottom: 1px solid var(--header-bg);
+    border-radius: 0px;
+  }
+  .contact_section_main::before {
+    width: 100%;
+    height: 187px;
+  }
+
+  .promis_section,
+  .form_section {
+    padding: 20px;
+  }
+
+  .promis_section p {
+    margin-top: 15px !important;
+  }
+
+  .partner_card {
+    min-height: 125px;
+  }
+}
+@media only screen and (max-width: 899.98px) {
+  .lenders_servicers_content{
+    padding-right: 40px !important;
+  }
+  .lenders_servicers_image{
+    justify-content: center !important;
+    overflow: hidden;
+    margin-bottom: -50px !important;
+  }
+  .lenders_servicers_image img{
+    margin-right: 0px !important;
+    rotate: 90deg;
+    height: 50%;
+    margin-bottom: -55px;
+    width: auto !important;
+  }
+}
+@media only screen and (max-width: 899px) {
+  .about_card {
+    max-width: unset;
+  }
+  .values_card p {
+    max-width: unset;
+  }
+  .Insurance_Marketplace_card {
+    height: unset;
+    width: unset;
+    padding: 30px 0px;
+  }
+
+  .team_sub_desc h2 {
+    max-width: unset;
+  }
+  .aboutText p {
+    max-width: unset;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .footer_section {
+    height: unset;
+    padding: 20px 0;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .hero_image_main {
+    margin: auto;
+    display: block;
+  }
+  .partner_box_main {
+    grid-template-columns: auto;
+  }
+  .partner_box {
+    padding: 20px;
+    min-height: 183px;
+    padding: 20px 0px;
+  }
+  .partner_box:nth-child(2) {
+    border-right: unset;
+    border-left: unset;
+    border-bottom: 1px solid #dedfe4;
+  }
+  .partner_box:nth-child(3) {
+    border-right: unset;
+    border-left: unset;
+    border-bottom: 1px solid #dedfe4;
+  }
+  .partner_box:nth-child(4) {
+    border-bottom: 1px solid #dedfe4;
+    justify-content: start;
+    border-right: unset;
+    border-left: unset;
+  }
+  .partner_box:nth-child(5) {
+    border-left: unset;
+    justify-content: start;
+    border-right: unset;
+    border-left: unset;
+  }
+  .contentTitleBox {
+    width: -webkit-fill-available;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .contentBox {
+    width: -webkit-fill-available;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .learnMoreModel {
+    width: 85%;
+    padding: 10px;
+  }
+}
+@media only screen and (max-width: 484px) {
+  .contact_section_main::before {
+    content: unset;
+  }
+  .promis_section {
+    margin-left: -30px;
+    margin-right: -30px;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .hero_image_main {
+    max-width: 300px;
+  }
+}

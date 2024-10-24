@@ -1,0 +1,46 @@
+@font-face {
+  font-family: "bunch-bold";
+  src: local("bunch-bold"), url("./fonts/Bunch-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "Jokker-Bold";
+  src: local("Jokker-Bold"), url("./fonts/Jokker-Bold.woff") format("woff"),
+    url("./fonts/Jokker-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Jokker-Heavy";
+  src: local("Jokker-Bold"), url("./fonts/Jokker-Heavy.woff") format("woff"),
+    url("./fonts/Jokker-Heavy.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Jokker-Light";
+  src: local("Jokker-Bold"), url("./fonts/Jokker-Light.woff") format("woff"),
+    url("./fonts/Jokker-Light.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Jokker-Light";
+  src: local("Jokker-Bold"), url("./fonts/Jokker-Light.woff") format("woff"),
+    url("./fonts/Jokker-Light.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Jokker-Medium";
+  src: local("Jokker-Bold"), url("./fonts/Jokker-Medium.woff") format("woff"),
+    url("./fonts/Jokker-Medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Jokker-Regular";
+  src: local("Jokker-Regular"),
+    url("./fonts/Jokker-Regular.woff") format("woff"),
+    url("./fonts/Jokker-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Jokker-Semibold";
+  src: local("Jokker-Semibold"),
+    url("./fonts/Jokker-Semibold.woff") format("woff"),
+    url("./fonts/Jokker-Semibold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Jokker-Thin";
+  src: local("Jokker-Thin"), url("./fonts/Jokker-Thin.woff") format("woff"),
+    url("./fonts/Jokker-Thin.woff2") format("woff2");
+}

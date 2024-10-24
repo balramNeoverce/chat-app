@@ -1,0 +1,40 @@
+body {
+  background-color: var(--dashboard-bg);
+}
+.container_width {
+  padding: 0px 50px;
+  width: -webkit-fill-available;
+  max-width: 75%;
+  margin: auto;
+  position: relative;
+}
+@media only screen and (max-width: 1440px) {
+  .container_width {
+    padding: 0px 50px;
+    max-width: 1240px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .container_width {
+    max-width: 1150px;
+    padding: 0px 50px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .container_width {
+    max-width: 864px;
+    padding: 0px 30px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .container_width {
+    max-width: 680px;
+    padding: 0px 30px;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .container_width {
+    max-width: 385px;
+    padding: 0px 30px;
+  }
+}
