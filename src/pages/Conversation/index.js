@@ -1,59 +1,104 @@
-import React, { useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "./index.css";
-import { useState } from "react";
+import { auth, db } from "./firebase";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { collection, addDoc, serverTimestamp, query, orderBy, onSnapshot } from "firebase/firestore";
 
 const Conversation = () => {
   const messageEndRef = useRef(null);
+  const [user, setUser] = useState(null);
+  const [messages, setMessages] = useState([]);
+  const [message, setMessage] = useState("");
+  const [loginData, setLoginData] = useState({ email: "", password: "" });
 
-  const [messages, setMessages] = useState([
-    { id: 1, text: "Hello!" },
-    { id: 2, text: "How are you?" },
-    { id: 3, text: "I'm good, thanks!" },
-    { id: 4, text: "Great to hear!" },
-    { id: 5, text: "Hello! I'm your friendly AI assistant." },
-    { id: 6, text: "Let's begin with some basic information." },
-    { id: 7, text: "What type of insurance are you looking for?" },
-    { id: 8, text: "Great, let me help you with that." },
-  ]);
+  useEffect(() => {
+    const unsubscribe = auth?.onAuthStateChanged((currentUser) => {
+      setUser(currentUser);
+    });
+    return () => unsubscribe();
+  }, []);
+
+  useEffect(() => {
+    if (!user) return;
+    const q = query(collection(db, "chat"), orderBy("createdAt"));
+    const unsubscribe = onSnapshot(q, (snapshot) => {
+      const msgs = [];
+      snapshot.forEach((doc) => msgs.push({ id: doc.id, ...doc.data() }));
+      setMessages(msgs);
+      scrollToBottom();
+    });
+    return () => unsubscribe();
+  }, [user]);
+
   const scrollToBottom = () => {
     const container = messageEndRef.current;
-    container.scrollTop = container.scrollHeight;
+    if (container) container.scrollTop = container.scrollHeight;
   };
-  const [message, setMessage] = useState("");
-  const sendMessage = () => {
-    messages?.push({ id: messages?.length, text: message });
-    setMessages([...messages]);
+
+  const handleLogin = async () => {
+    try {
+      const res = await signInWithEmailAndPassword(auth, loginData.email, loginData.password);
+      setUser(res.user);
+    } catch (err) {
+      alert("Login failed: " + err.message);
+    }
+  };
+
+  const sendMessage = async () => {
+    if (!message.trim()) return;
+    if (!user) {
+      alert("Please login to send a message.");
+      return;
+    }
+    await addDoc(collection(db, "chat"), {
+      text: message,
+      senderId: user.uid,
+      createdAt: serverTimestamp(),
+    });
     setMessage("");
-    setTimeout(() => {
-      scrollToBottom();
-    }, 300);
   };
+
+  if (!user) {
+    return (
+      <div className="chat-container">
+        <div className="login-box">
+          <h2>Login to Chat</h2>
+          <input
+            type="email"
+            placeholder="Email"
+            value={loginData.email}
+            onChange={(e) => setLoginData({ ...loginData, email: e.target.value })}
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={loginData.password}
+            onChange={(e) => setLoginData({ ...loginData, password: e.target.value })}
+          />
+          <button onClick={handleLogin}>Login</button>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="chat-container">
       <div className="header">
-        <img
-          src="https://agent-dev.yoloh.net/favicon.ico"
-          alt="assistant logo"
-          className="avatar"
-        />
+        <img src="https://agent-dev.yoloh.net/favicon.ico" alt="assistant logo" className="avatar" />
         <h2>Andi</h2>
         <p>Personal Insurance Assistant</p>
       </div>
       <div className="messages" ref={messageEndRef}>
-        {messages?.map((item, index) => {
-          return (
-            <div
-              className={`message ${
-                item?.id % 2 === 0 ? "justify-content-end" : ""
-              }`}
-              key={index}
-            >
-              <div className={`message-bubble ${
-                item?.id % 2 === 0 ? "sender" : ""
-              }`}>{item?.text}</div>
+        {messages.map((item) => (
+          <div
+            key={item.id}
+            className={`message ${item.senderId === user.uid ? "justify-content-end" : ""}`}
+          >
+            <div className={`message-bubble ${item.senderId === user.uid ? "sender" : ""}`}>
+              {item.text}
             </div>
-          );
-        })}
+          </div>
+        ))}
       </div>
       <div className="message-input">
         <input
@@ -61,13 +106,11 @@ const Conversation = () => {
           placeholder="Type your message..."
           value={message}
           onKeyDown={(event) => {
-            if (event.key === "Enter" && message?.trim()?.length > 0) {
-              sendMessage();
-            }
+            if (event.key === "Enter") sendMessage();
           }}
-          onChange={(event) => setMessage(event?.target?.value)}
+          onChange={(e) => setMessage(e.target.value)}
         />
-        <button onClick={sendMessage} disabled={!message?.trim()?.length > 0}>
+        <button onClick={sendMessage} disabled={!message.trim().length}>
           Send
         </button>
       </div>
